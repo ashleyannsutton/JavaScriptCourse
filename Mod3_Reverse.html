@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<p id="rasmdemo">
+	<script>
+function reverseString(str) {
+	var splitString = str.split("");
+	var reverseArray = splitString.reverse();
+	var joinArray = reverseArray.join("");
+	return joinArray;
+}
+
+document.getElementById("rasmdemo").innerHTML = reverseString("Ashley Sutton");
+	</script>
+</body>
+</html>

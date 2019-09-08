@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset=utf-8 />
+<title>Form Values Demo</title>
+<style type="text/css">
+	body {margin: 30px;}
+</style> 
+<script>
+	function getFormValues()
+	{
+		var firstName = document.forms["form1"]["fname"].value;
+		var lname = document.forms["form1"]["lname"].value;
+		var address = document.forms["form1"]["address"].value;
+		var city = document.forms["form1"]["city"].value;
+		var state = document.forms["form1"]["state"].value;
+	    alert(firstName + "\n" + lname+"\n"+address+"\n"+city+"\n"+state);
+	  
+	  document.getElementById('firstName').innerHTML = firstName;
+	  document.getElementById('lastName').innerHTML = lname;
+	  document.getElementById('address').innerHTML = address;
+	  document.getElementById('city').innerHTML = city;
+	  document.getElementById('state').innerHTML = state;
+	}
+</script>
+</head><body>
+	<form id="form1">
+	First name:<br>
+	<input type="text" name="fname" value=""><br><br>
+
+	Last name:<br>
+	<input type="text" name="lname" value=""><br><br>
+
+	Address:<br>
+	<input type="text" name="address" value=""><br><br>
+
+	City:<br>
+	<input type="text" name="city" value=""><br><br>
+
+	State:<br>
+	<input type="text" name="state" value=""><br><br>
+
+	<input type="button" value="Submit" onclick="getFormValues()">
+</form>
+
+<table cellpadding="3">
+   <tbody>
+    <tr>
+     <td>
+       <b>First Name:</b>      
+     </td>
+	 <td id="firstName"/>
+    </tr>
+	
+	 <tr>
+     <td>
+       <b>Last Name:</b>      
+     </td>
+	 <td id="lastName"/>
+    </tr>
+   
+    <tr>
+     <td>
+       <b>Address:</b>      
+     </td>
+	 <td id="address"/>
+    </tr>
+   
+    <tr>
+     <td>
+       <b>City:</b>      
+     </td>
+	 <td id="city"/>
+    </tr>
+   
+    <tr>
+     <td>
+       <b>State:</b>      
+     </td>
+	 <td id="state"/>
+    </tr>
+   </tbody>
+</table>
+</body></html>

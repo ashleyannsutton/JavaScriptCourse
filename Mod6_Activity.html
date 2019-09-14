@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset=utf-8 />
+<title>Form Values Demo</title>
+<style type="text/css">
+	body {margin: 30px;}
+</style> 
+<script>
+	function getFormValues()
+	{
+		var width = parseInt(document.getElementById("widthInput").value, 10);
+		var height = parseInt(document.getElementById("lengthInput").value, 10);
+		var area = width * height;
+		 document.getElementById("area").value = " " + area + " Square Foot";
+	}
+</script>
+</head><body>
+	<form id="form1">
+		<div class="form-group" style="margin:5px">
+			<label>What is the length of the room in feet?</label>
+			<input type="number" class="input" id="lengthInput" name="" step="any" min="0" oninput="validity.valid||(value='');">
+		</div>
+		<div class="form-group" style="margin:5px">
+			<label>What is the width of the room in feet?</label>
+			<input type="number" class="input" id="widthInput" name="" step="any" min="0" oninput="validity.valid||(value='');">
+		</div>	
+	
+		<input type="button" value="Submit" style="margin:5px" onclick="getFormValues()">
+	</form>
+	
+	 <br><br>
+	
+	Area <input type="Text" name="area" id="area" size="20" readonly> <br><br>
+
+</body></html>
